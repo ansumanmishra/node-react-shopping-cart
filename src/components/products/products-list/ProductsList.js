@@ -22,15 +22,14 @@ class Products extends Component {
     render() {
         const productsList = this.state.products.length ? this.state.products.map( (product) => {
             return (
-                <div className="col-sm-3" key={product.id}>
+                <div className="col-sm-3 mb-3" key={product.id}>
                     <div className="card">
                         <div className="card-body">
                             <Link to={`/products/${product.id}`}>
                                 <img src={require(`../../../static/${product.sku}_2.jpg`)} className="card-img-top" alt="..." />
                             </Link>
-                            <h5 className="card-title">{product.title}</h5>
-                            <p className="card-text">{product.description}</p>
-                            <a href="#" className="btn btn-primary">Add to cart</a>
+                            <h6 className="card-title">{product.title}</h6>
+                            <a href="#" className="btn btn-primary">Add to cart</a> <a href="#" className="btn btn-primary">Buy</a>
                         </div>
                     </div>
                 </div>

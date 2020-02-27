@@ -24,16 +24,15 @@ const ProductDetails = (props) => {
                     <div className="col-sm-4">
                         <div className="card">
                             <div className="card-body">
-                                {product.sku}
                                 <img src={require(`../../../static/${product.sku}_1.jpg`)} className="card-img-top" alt={product.title} />
-                                <h5 className="card-title">{product.title}</h5>
-                                <p className="card-text">{product.description}</p>
-                                <a href="#" className="btn btn-primary">Add to cart</a>
                             </div>
                         </div>   
                     </div>
-                    <div className="col-sm-8" key={product.id}>
-
+                    <div className="col-sm-8">
+                    <h5 className="card-title">{product.title}</h5>
+                        <p className="card-text">{product.description}</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum aut deserunt nisi, necessitatibus dolor inventore maiores! Natus, eum, corrupti qui tenetur non nostrum saepe vero nam quod cum adipisci cumque?</p>
+                        <a href="#" className="btn btn-primary">Add to cart</a> <a href="#" className="btn btn-primary">Buy</a>
                     </div>
                 </div>
             </>
