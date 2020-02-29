@@ -1,5 +1,9 @@
 .card-body {
-    background: #EDEDED;
+
+}
+
+.card {
+    border-radius: 0.5rem;
 }
 
 .card-title {

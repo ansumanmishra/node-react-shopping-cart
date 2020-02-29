@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 
 import './App.css';
 
@@ -8,17 +8,17 @@ import Main from './components/main/Main';
 import Footer from './components/footer/Footer';
 
 function App() {
-  return (
-    <>
-      <BrowserRouter>
-        <div className="container">
-          <Header />
-            <Main />
-          <Footer />
-        </div>
-      </BrowserRouter>
-    </>
-  );
+    return (
+        <>
+            <BrowserRouter>
+                <Header/>
+                <div className="container content-area mb-3">
+                    <Main/>
+                </div>
+                <Footer/>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;

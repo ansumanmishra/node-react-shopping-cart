@@ -7,13 +7,19 @@ const app = express();
 app.use(cors());
 
 app.get('/products', (req, res) => {
-    res.sendFile(path.join(__dirname, 'data', 'products.json'));
+    const jsonData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'products.json'), 'utf8'));
+    if (!req.query.name || req.query.name !== 'null') {
+        const product = jsonData.products.filter( product => product.title == req.query.name);
+        res.json(product);
+    } else {
+        res.json(jsonData.products);
+    }
+
 });
 
 app.get('/products/:id', (req, res) => {
     const jsonData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'products.json'), 'utf8'));
     const product = jsonData.products.filter( product => product.id == parseInt(req.params.id, 10));
-
     res.json(product);
 });
 

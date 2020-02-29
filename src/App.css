@@ -1,7 +1,19 @@
-.bg-light {
-    background: white;
+.nav-block {
+    background-color: #ff7f00 !important;
+    color: white;
 }
 
 .search-input {
     border-radius: 5px;
+}
+
+.footer-area {
+    margin-bottom: 50px;
+    background: #ff7f00;
+    height: 154px;
+    color: white;
+}
+
+.content-area {
+    min-height: 500px;
 }
